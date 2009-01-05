@@ -1,0 +1,22 @@
+<h1>Listing mdl_role_assignments</h1>
+
+<table>
+  <tr>
+    <th>Roleid</th>
+    <th>Userid</th>
+  </tr>
+
+<% for mdl_role_assignment in @mdl_role_assignments %>
+  <tr>
+    <td><%=h mdl_role_assignment.roleid %></td>
+    <td><%=h mdl_role_assignment.userid %></td>
+    <td><%= link_to 'Show', mdl_role_assignment %></td>
+    <td><%= link_to 'Edit', edit_mdl_role_assignment_path(mdl_role_assignment) %></td>
+    <td><%= link_to 'Destroy', mdl_role_assignment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New mdl_role_assignment', new_mdl_role_assignment_path %>

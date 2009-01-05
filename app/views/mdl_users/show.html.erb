@@ -1,0 +1,38 @@
+<p>
+  <b>Username:</b>
+  <%=h @mdl_user.username %>
+</p>
+
+<p>
+  <b>Firstname:</b>
+  <%=h @mdl_user.firstname %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%=h @mdl_user.lastname %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @mdl_user.email %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%=h @mdl_user.country %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @mdl_user.city %>
+</p>
+<p>
+<% @mdl_user.mdl_roles.each do |role| %>
+  <b>Roles:</b>
+  <%= role.name %>
+<% end %> 
+</p>
+
+<%= link_to 'Edit', edit_mdl_user_path(@mdl_user) %> |
+<%= link_to 'Back', mdl_users_path %>

@@ -1,0 +1,32 @@
+<h1>Listing mdl_users</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Country</th>
+    <th>City</th>
+  </tr>
+
+<% for mdl_user in @mdl_users %>
+  <tr>
+    <td><%=h mdl_user.auth %></td>
+    <td><%=h mdl_user.mnethostid %></td>
+    <td><%=h mdl_user.username %></td>
+    <td><%=h mdl_user.firstname %></td>
+    <td><%=h mdl_user.lastname %></td>
+    <td><%=h mdl_user.email %></td>
+    <td><%=h mdl_user.country %></td>
+    <td><%=h mdl_user.city %></td>
+    <td><%= link_to 'Show', mdl_user %></td>
+    <td><%= link_to 'Edit', edit_mdl_user_path(mdl_user) %></td>
+    <td><%= link_to 'Destroy', mdl_user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New mdl_user', new_mdl_user_path %>
